@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color:  #030305;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+section {
+  padding-bottom: 100px;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body {
+  max-width: 1920px;
+}
+
+.header {
+  padding-block: 25px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  column-gap: 244px;
+}
+
+.header__logo {
+  width: 113px;
+  height: 39px;
+}
+
+.menu {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.menu__list {
+  display: flex;
+  column-gap: 115px;
+}
+
+.menu__item a {
+  text-decoration: none;
+}
+
+.menu__item a:hover {
+  border-bottom: 2px solid black;
+}
+
+.main {
+  background-image: url("../../../frontend-intensive_car-app/car-app/src/assets/images/background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-block: 105px 154px;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.main__title {
+  max-width: 855px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 110%;
+}
+
+.main__text {
+  line-height: 130%;
+  max-width: 502px;
+}
+
+.main__btn {
+  width: 334px;
+  height: 64px;
+}
+
+button {
+  background: #030305;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: background-color .5s;
+}
+
+button:hover:not(:disabled) {
+  background: #575757;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: gray;
+  background-color: #343434;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.car__items {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 40px;
+}
+
+.car__card {
+  max-width: 384px;
+}
+
+.card {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+
+.card__title {
+  font-size: 24px;
+  line-height: 150%;
+  margin-top: 15px;
+}
+
+.card__image {
+  vertical-align: bottom;
+  transition: all .3s;
+}
+
+.card__image:hover {
+  transform: scale(1.1);
+}
+
+.card__info {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  margin-top: 17px;
+}
+
+.card__option {
+  width: 110px;
+}
+
+.option {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.option__title {
+  margin-top: 11px;
+}
+
+.order {
+  position: relative;
+}
+
+.card__btn {
+  margin-top: 13px;
+  width: 384px;
+  height: 54px;
+}
+
+.option__text {
+  font-weight: 400;
+}
+
+.order .order__container {
+  position: relative;
+  padding-bottom: 121px;
+}
+
+.order__info {
+  margin-top: 20px;
+  line-height: 130%;
+  color: #5D5D5F;
+}
+
+.order__form {
+  margin-top: 60px;
+}
+.form {
+  max-width: 344px;
+  line-height: 130%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.form__input {
+  background: #FFFFFF;
+  border: 1px solid #5D5D5F;
+  padding: 22px 18px;
+  color: #000000;
+  outline: none;
+}
+
+.form__input::placeholder {
+  color: #5D5D5F;
+}
+
+.order__btn {
+  height: 64px;
+}
+
+.form__input,
+.order__btn {
+  width: 100%;
+  overflow: hidden;
+}
+
+.order__img {
+  position: absolute;
+  bottom: 0;
+  left: 401px;
+}
+
+.footer {
+  border-top: 1px solid #E5E5E5;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 36px;
+  align-items: center;
+}
+
+.footer__text {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.form__input.ng-touched.ng-valid {
+  border: 1px solid #5D5D5F;
+}
+
+.form__input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}

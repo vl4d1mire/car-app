@@ -1,0 +1,87 @@
+<body>
+<header class="header">
+  <div class="header__container">
+    <img class="header__logo" src="../assets/images/logo.svg" alt="Logo">
+    <div class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a href="#cars">Автомобили</a>
+        </li>
+        <li class="menu__item">
+          <a href="#order">Бронирование авто</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<section class="main" [ngStyle]="bgPos">
+  <div class="main__container">
+    <div class="main__title">Аренда премиальных автомобилей</div>
+    <div class="main__text">
+      В нашем клубе имеется солидная коллекция спортивных автомобилей — от достаточно распространенных серийных
+      машин до настоящего гоночного эксклюзива. Воспользуйтесь уникальной возможностью побывать за рулем настоящей
+      легенды и узнать, на что она способна за пределами гоночной трассы!
+    </div>
+    <button class="main__btn" (click)="scrollPage(cars)">Посмотреть автомобили</button>
+  </div>
+</section>
+<section class="car" id="cars" #cars>
+  <div class="car__container">
+    <div class="car__title title">Наш автопарк</div>
+    <div class="car__items">
+      <div class="car__card card" *ngFor="let car of carsData">
+        <img src="../assets/images/{{car.image}}" alt="image" class="card__image">
+        <div class="card__title">{{car.name}}</div>
+        <div class="card__info">
+          <div class="card__option option">
+            <img src="../assets/images/transmission.png" alt="transmission icon" class="option__icon">
+            <div class="option__title">Коробка</div>
+            <div class="option__text">{{car.transmission}}</div>
+          </div>
+          <div class="card__option option">
+            <img src="../assets/images/wheel.svg" alt="wheel icon" class="option__icon">
+            <div class="option__title">Двигатель</div>
+            <div class="option__text">{{car.engine}}</div>
+          </div>
+          <div class="card__option option">
+            <img src="../assets/images/year.png" alt="year icon" class="option__icon">
+            <div class="option__title">Год выпуска</div>
+            <div class="option__text">{{car.year}}</div>
+          </div>
+        </div>
+        <button class="card__btn" (click)="scrollPage(order, car)">Забронировать</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="order" id="order" #order>
+  <div class="order__container">
+    <div class="order__title title">Узнать цену и забронировать</div>
+    <div class="order__info">
+      Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования
+    </div>
+    <form action="" class="order__form form" [formGroup]="orderForm">
+      <label>
+        <input type="text" class="form__input" placeholder="Ваше имя" formControlName="name">
+      </label>
+      <label>
+        <input type="tel" class="form__input" placeholder="Ваше телефон" formControlName="phone">
+      </label>
+      <label>
+        <input type="text" class="form__input" placeholder="Автомобиль, который вас интересует" formControlName="text">
+      </label>
+      <button class="order__btn" (click)="onSubmit()" [disabled]="!orderForm.valid">Узнать цену</button>
+    </form>
+    <img src="../assets/images/rolls.png" alt="rolls ../assets/images" class="order__img" [ngStyle]="trans">
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__container">
+    <img class="footer__logo" src="../assets/images/logo.svg" alt="Logo">
+    <div class="footer__text">Все права защищены</div>
+  </div>
+</footer>
+</body>
