@@ -33,23 +33,23 @@
     <div class="car__title title">Наш автопарк</div>
     <div class="car__items">
       <div class="car__card card" *ngFor="let car of carsData">
-        <img src="../assets/images/{{car.image}}" alt="image" class="card__image">
+        <img src="{{car.image}}" alt="image" class="card__image">
         <div class="card__title">{{car.name}}</div>
         <div class="card__info">
           <div class="card__option option">
-            <img src="../assets/images/transmission.png" alt="transmission icon" class="option__icon">
-            <div class="option__title">Коробка</div>
-            <div class="option__text">{{car.transmission}}</div>
+            <img src="assets/images/gear.svg" alt="transmission icon" class="option__icon">
+            <div class="option__title">Привод</div>
+            <div class="option__text">{{car.gear}}</div>
           </div>
           <div class="card__option option">
-            <img src="../assets/images/wheel.svg" alt="wheel icon" class="option__icon">
+            <img src="assets/images/wheel.svg" alt="wheel icon" class="option__icon">
             <div class="option__title">Двигатель</div>
             <div class="option__text">{{car.engine}}</div>
           </div>
           <div class="card__option option">
-            <img src="../assets/images/year.png" alt="year icon" class="option__icon">
-            <div class="option__title">Год выпуска</div>
-            <div class="option__text">{{car.year}}</div>
+            <img src="assets/images/belt.svg" alt="year icon" class="option__icon">
+            <div class="option__title">Кол-во мест</div>
+            <div class="option__text">{{car.places}}</div>
           </div>
         </div>
         <button class="card__btn" (click)="scrollPage(order, car)">Забронировать</button>
@@ -71,16 +71,16 @@
         <input type="tel" class="form__input" placeholder="Ваше телефон" formControlName="phone">
       </label>
       <label>
-        <input type="text" class="form__input" placeholder="Автомобиль, который вас интересует" formControlName="text">
+        <input type="text" class="form__input" placeholder="Автомобиль, который вас интересует" formControlName="car">
       </label>
       <button class="order__btn" (click)="onSubmit()" [disabled]="!orderForm.valid">Узнать цену</button>
     </form>
-    <img src="../assets/images/rolls.png" alt="rolls ../assets/images" class="order__img" [ngStyle]="trans">
+    <img src="assets/images/rolls.png" alt="rolls ../assets/images" class="order__img" [ngStyle]="trans">
   </div>
 </section>
 <footer class="footer">
   <div class="footer__container">
-    <img class="footer__logo" src="../assets/images/logo.svg" alt="Logo">
+    <img class="footer__logo" src="assets/images/logo.svg" alt="Logo">
     <div class="footer__text">Все права защищены</div>
   </div>
 </footer>

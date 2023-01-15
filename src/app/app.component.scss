@@ -62,6 +62,7 @@ body {
 
 .menu__item a {
   text-decoration: none;
+  color: #030305;
 }
 
 .menu__item a:hover {
@@ -69,7 +70,7 @@ body {
 }
 
 .main {
-  background-image: url("../../../frontend-intensive_car-app/car-app/src/assets/images/background.png");
+  background-image: url("../assets/images/background.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
